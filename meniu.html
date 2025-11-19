@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meniu - Cafenea Aroma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-extra.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Cafenea Aroma</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Acasă</a></li>
+                <li class="dropdown">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="dropdown-label active">Meniu</label>
+                    <ul class="dropdown-content">
+                        <li><a href="#cafea">Cafea</a></li>
+                        <li><a href="#deserturi">Deserturi</a></li>
+                        <li><a href="#bauturi">Băuturi Reci</a></li>
+                    </ul>
+                </li>
+                <li><a href="despre.html">Despre Noi</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="meniu-page">
+        <section class="page-header">
+            <h2>Meniul Nostru</h2>
+            <p>Descoperă varietatea de preparate delicioase</p>
+        </section>
+
+        <section id="cafea" class="menu-section">
+            <h3>Specialități Cafea</h3>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <h4>Espresso</h4>
+                    <p class="description">Cafea tare, intensă, preparată din boabe proaspăt măcinate</p>
+                    <p class="price">8 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Cappuccino</h4>
+                    <p class="description">Espresso cu spumă de lapte cremoasă și pudră de cacao</p>
+                    <p class="price">12 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Latte</h4>
+                    <p class="description">Cafea cu lapte, ideală pentru o dimineață liniștită</p>
+                    <p class="price">13 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Americano</h4>
+                    <p class="description">Espresso diluat cu apă caldă pentru un gust echilibrat</p>
+                    <p class="price">10 lei</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="deserturi" class="menu-section">
+            <h3>Deserturi</h3>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <h4>Croissant</h4>
+                    <p class="description">Croissant franțuzesc cu unt, proaspăt din cuptor</p>
+                    <p class="price">7 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Cheesecake</h4>
+                    <p class="description">Cheesecake cremos cu topping de fructe de pădure</p>
+                    <p class="price">18 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Brownie</h4>
+                    <p class="description">Brownie cu ciocolată belgiană și nuci</p>
+                    <p class="price">15 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Tiramisu</h4>
+                    <p class="description">Desert italian clasic cu mascarpone și cafea</p>
+                    <p class="price">20 lei</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="bauturi" class="menu-section">
+            <h3>Băuturi Reci</h3>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <h4>Iced Latte</h4>
+                    <p class="description">Cafea cu lapte și gheață, perfectă pentru zilele călduroase</p>
+                    <p class="price">14 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Frappe</h4>
+                    <p class="description">Cafea rece mixată cu gheață și frișcă</p>
+                    <p class="price">16 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Limonadă</h4>
+                    <p class="description">Limonadă naturală cu mentă și fructe proaspete</p>
+                    <p class="price">12 lei</p>
+                </article>
+                <article class="menu-item">
+                    <h4>Smoothie</h4>
+                    <p class="description">Smoothie cu fructe de sezon și iaurt natural</p>
+                    <p class="price">17 lei</p>
+                </article>
+            </div>
+        </section>
+
+        <aside class="menu-note">
+            <p>Toate preparatele sunt realizate cu ingrediente premium de la furnizori locali</p>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Program</h4>
+                <p>Luni - Vineri: 07:00 - 22:00</p>
+                <p>Sâmbătă - Duminică: 08:00 - 23:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Telefon: 0712 345 678</p>
+                <p>Email: contact@cafeneaaroma.ro</p>
+            </div>
+            <div class="footer-section">
+                <h4>Adresă</h4>
+                <p>Str. Academiei nr. 15</p>
+                <p>București, Sector 1</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cafenea Aroma. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

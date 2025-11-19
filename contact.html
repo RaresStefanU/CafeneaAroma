@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cafenea Aroma</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-extra.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Cafenea Aroma</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Acasă</a></li>
+                <li class="dropdown">
+                    <input type="checkbox" id="menu-toggle">
+                    <label for="menu-toggle" class="dropdown-label">Meniu</label>
+                    <ul class="dropdown-content">
+                        <li><a href="meniu.html#cafea">Cafea</a></li>
+                        <li><a href="meniu.html#deserturi">Deserturi</a></li>
+                        <li><a href="meniu.html#bauturi">Băuturi Reci</a></li>
+                    </ul>
+                </li>
+                <li><a href="despre.html">Despre Noi</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-page">
+        <section class="page-header">
+            <h2>Contactează-ne</h2>
+            <p>Suntem aici pentru tine</p>
+        </section>
+
+        <section class="contact-content">
+            <div class="contact-columns">
+                <article class="contact-info">
+                    <h3>Informații de Contact</h3>
+                    
+                    <div class="info-item">
+                        <h4>Adresă</h4>
+                        <p>Strada Academiei nr. 15</p>
+                        <p>București, Sector 1, 010011</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4>Telefon</h4>
+                        <p>0712 345 678</p>
+                        <p>021 123 4567</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4>Email</h4>
+                        <p>contact@cafeneaaroma.ro</p>
+                        <p>comenzi@cafeneaaroma.ro</p>
+                    </div>
+                    
+                    <div class="info-item">
+                        <h4>Program</h4>
+                        <p>Luni - Vineri: 07:00 - 22:00</p>
+                        <p>Sâmbătă: 08:00 - 23:00</p>
+                        <p>Duminică: 08:00 - 23:00</p>
+                    </div>
+                </article>
+
+                <article class="contact-form-container">
+                    <h3>Trimite-ne un Mesaj</h3>
+                    <div class="form-wrapper">
+                        <div class="form-group">
+                            <label for="nume">Nume:</label>
+                            <input type="text" id="nume" name="nume" placeholder="Numele tău">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="adresa@email.ro">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subiect">Subiect:</label>
+                            <input type="text" id="subiect" name="subiect" placeholder="Subiectul mesajului">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mesaj">Mesaj:</label>
+                            <textarea id="mesaj" name="mesaj" rows="5" placeholder="Mesajul tău..."></textarea>
+                        </div>
+                        
+                        <button type="button" class="submit-button">Trimite Mesajul</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h3>Cum Ajungi la Noi</h3>
+            <div class="map-placeholder">
+                <p>📍 Strada Academiei nr. 15, București</p>
+                <p>Lângă Universitatea din București</p>
+                <p>Parcare disponibilă în apropiere</p>
+            </div>
+        </section>
+
+        <aside class="contact-note">
+            <h4>Rezervări</h4>
+            <p>Pentru evenimente private sau rezervări de grup (peste 8 persoane), te rugăm să ne contactezi cu minim 48 de ore în avans la numărul de telefon sau prin email.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Program</h4>
+                <p>Luni - Vineri: 07:00 - 22:00</p>
+                <p>Sâmbătă - Duminică: 08:00 - 23:00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>Telefon: 0712 345 678</p>
+                <p>Email: contact@cafeneaaroma.ro</p>
+            </div>
+            <div class="footer-section">
+                <h4>Adresă</h4>
+                <p>Str. Academiei nr. 15</p>
+                <p>București, Sector 1</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Cafenea Aroma. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

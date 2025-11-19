@@ -1,0 +1,92 @@
+{
+  "cafea": [
+    {
+      "id": 1,
+      "name": "Espresso",
+      "description": "Cafea tare, intensă, preparată din boabe proaspăt măcinate",
+      "price": 8,
+      "category": "cafea"
+    },
+    {
+      "id": 2,
+      "name": "Cappuccino",
+      "description": "Espresso cu spumă de lapte cremoasă și pudră de cacao",
+      "price": 12,
+      "category": "cafea"
+    },
+    {
+      "id": 3,
+      "name": "Latte",
+      "description": "Cafea cu lapte, ideală pentru o dimineață liniștită",
+      "price": 13,
+      "category": "cafea"
+    },
+    {
+      "id": 4,
+      "name": "Americano",
+      "description": "Espresso diluat cu apă caldă pentru un gust echilibrat",
+      "price": 10,
+      "category": "cafea"
+    }
+  ],
+  "deserturi": [
+    {
+      "id": 5,
+      "name": "Croissant",
+      "description": "Croissant franțuzesc cu unt, proaspăt din cuptor",
+      "price": 7,
+      "category": "deserturi"
+    },
+    {
+      "id": 6,
+      "name": "Cheesecake",
+      "description": "Cheesecake cremos cu topping de fructe de pădure",
+      "price": 18,
+      "category": "deserturi"
+    },
+    {
+      "id": 7,
+      "name": "Brownie",
+      "description": "Brownie cu ciocolată belgiană și nuci",
+      "price": 15,
+      "category": "deserturi"
+    },
+    {
+      "id": 8,
+      "name": "Tiramisu",
+      "description": "Desert italian clasic cu mascarpone și cafea",
+      "price": 20,
+      "category": "deserturi"
+    }
+  ],
+  "bauturi": [
+    {
+      "id": 9,
+      "name": "Iced Latte",
+      "description": "Cafea cu lapte și gheață, perfectă pentru zilele călduroase",
+      "price": 14,
+      "category": "bauturi"
+    },
+    {
+      "id": 10,
+      "name": "Frappe",
+      "description": "Cafea rece mixată cu gheață și frișcă",
+      "price": 16,
+      "category": "bauturi"
+    },
+    {
+      "id": 11,
+      "name": "Limonadă",
+      "description": "Limonadă naturală cu mentă și fructe proaspete",
+      "price": 12,
+      "category": "bauturi"
+    },
+    {
+      "id": 12,
+      "name": "Smoothie",
+      "description": "Smoothie cu fructe de sezon și iaurt natural",
+      "price": 17,
+      "category": "bauturi"
+    }
+  ]
+}
