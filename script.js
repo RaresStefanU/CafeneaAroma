@@ -258,7 +258,7 @@ const menuManager = {
     
     async loadMenuFromJSON() {
         try {
-            const response = await fetch('menu-items.json'); // importa meniu dinamic AJAJAX
+            const response = await fetch('menu-items.json'); 
             const data = await response.json();
             this.displayMenuItems(data);
         } catch (error) {
@@ -282,7 +282,7 @@ const menuManager = {
             buyBtn.className = 'buy-btn';
             buyBtn.textContent = 'Adaugă în coș';
             buyBtn.addEventListener('click', () => {
-                cartManager.addToCart({ name, price }); // Modifica DOM
+                cartManager.addToCart({ name, price }); 
             });
             
             item.appendChild(buyBtn);
@@ -675,7 +675,7 @@ const promoManager = {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    authManager.init(); // Atuentificare sesiune
+    authManager.init();
     cartManager.init();
     menuManager.init();
     contactForm.init();
