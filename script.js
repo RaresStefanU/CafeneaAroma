@@ -1,4 +1,4 @@
-// ==================== AUTENTIFICARE & SESIUNE ====================
+
 const authManager = {
     init() {
         this.loadUsers();
@@ -125,7 +125,6 @@ const authManager = {
     }
 };
 
-// ==================== COȘUL DE CUMPĂRĂTURI ====================
 const cartManager = {
     init() {
         this.loadCart();
@@ -249,7 +248,6 @@ const cartManager = {
     }
 };
 
-// ==================== MENIU DINAMIC CU AJAX ====================
 const menuManager = {
     init() {
         if (window.location.pathname.includes('meniu.html')) {
@@ -260,7 +258,7 @@ const menuManager = {
     
     async loadMenuFromJSON() {
         try {
-            const response = await fetch('menu-items.json');
+            const response = await fetch('menu-items.json'); // importa meniu dinamic AJAJAX
             const data = await response.json();
             this.displayMenuItems(data);
         } catch (error) {
@@ -269,7 +267,7 @@ const menuManager = {
     },
     
     displayMenuItems(data) {
-        // Afișează itemele din JSON (opțional, pentru demonstrație)
+        
         console.log('Meniu încărcat:', data);
     },
     
@@ -284,7 +282,7 @@ const menuManager = {
             buyBtn.className = 'buy-btn';
             buyBtn.textContent = 'Adaugă în coș';
             buyBtn.addEventListener('click', () => {
-                cartManager.addToCart({ name, price });
+                cartManager.addToCart({ name, price }); // Modifica DOM
             });
             
             item.appendChild(buyBtn);
@@ -292,7 +290,6 @@ const menuManager = {
     }
 };
 
-// ==================== FORMULAR CONTACT CU VALIDARE ====================
 const contactForm = {
     init() {
         if (window.location.pathname.includes('contact.html')) {
@@ -310,7 +307,7 @@ const contactForm = {
             this.validateForm();
         });
         
-        // Validare în timp real
+
         const inputs = document.querySelectorAll('#nume, #email, #subiect');
         inputs.forEach(input => {
             input.addEventListener('input', (e) => {
@@ -382,11 +379,11 @@ const contactForm = {
         
         const ctx = canvas.getContext('2d');
         
-        // Desenăm o hartă simplificată
+
         ctx.fillStyle = '#f0e6d2';
         ctx.fillRect(0, 0, 600, 300);
         
-        // Străzi
+        
         ctx.strokeStyle = '#8b5a3c';
         ctx.lineWidth = 3;
         ctx.beginPath();
@@ -396,7 +393,7 @@ const contactForm = {
         ctx.lineTo(600, 150);
         ctx.stroke();
         
-        // Locație cafenea
+        
         ctx.fillStyle = '#ff6b35';
         ctx.beginPath();
         ctx.arc(100, 150, 20, 0, Math.PI * 2);
@@ -406,7 +403,7 @@ const contactForm = {
         ctx.font = 'bold 16px Arial';
         ctx.fillText('Cafenea Aroma', 130, 155);
         
-        // Animație pulsație
+        
         let radius = 20;
         let growing = true;
         setInterval(() => {
@@ -434,7 +431,7 @@ const contactForm = {
     }
 };
 
-// ==================== SVG LOGO ANIMAT ====================
+
 const svgManager = {
     init() {
         this.createSVGLogo();
@@ -452,14 +449,14 @@ const svgManager = {
         svg.style.display = 'inline-block';
         svg.style.verticalAlign = 'middle';
         
-        // Ceașcă de cafea
+        
         const cup = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         cup.setAttribute('d', 'M10,15 L10,35 Q10,40 15,40 L35,40 Q40,40 40,35 L40,15 Z');
         cup.setAttribute('fill', '#fff');
         cup.setAttribute('stroke', '#ff6b35');
         cup.setAttribute('stroke-width', '2');
         
-        // Abur (animat)
+        
         const steam1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         steam1.setAttribute('d', 'M15,10 Q15,5 20,5');
         steam1.setAttribute('stroke', '#fff');
@@ -482,7 +479,7 @@ const svgManager = {
     }
 };
 
-// ==================== EFECTE VIZUALE & INTERACȚIUNI ====================
+
 const visualEffects = {
     init() {
         this.randomColorFeatures();
@@ -560,13 +557,13 @@ const visualEffects = {
     
     setupKeyboardShortcuts() {
         document.addEventListener('keydown', (e) => {
-            // Ctrl + K pentru a deschide coșul
+
             if (e.ctrlKey && e.key === 'k') {
                 e.preventDefault();
                 cartManager.showCart();
             }
             
-            // Ctrl + L pentru login
+            
             if (e.ctrlKey && e.key === 'l') {
                 e.preventDefault();
                 if (!localStorage.getItem('currentUser')) {
@@ -577,7 +574,7 @@ const visualEffects = {
     }
 };
 
-// ==================== STATISTICI & DATE ====================
+
 const statsManager = {
     init() {
         this.trackVisit();
@@ -598,11 +595,11 @@ const statsManager = {
         const visits = JSON.parse(localStorage.getItem('visits') || '[]');
         console.log(`Total vizite: ${visits.length}`);
         
-        // Folosim metodele Array
+        
         const uniquePages = [...new Set(visits.map(v => v.page))];
         console.log('Pagini vizitate:', uniquePages.join(', '));
         
-        // Folosim Math pentru statistici
+        
         if (visits.length > 0) {
             const today = new Date().toLocaleDateString('ro-RO');
             const todayVisits = visits.filter(v => 
@@ -613,7 +610,7 @@ const statsManager = {
     }
 };
 
-// ==================== THEME TOGGLE ====================
+
 const themeManager = {
     init() {
         this.createThemeToggle();
@@ -639,7 +636,7 @@ const themeManager = {
     }
 };
 
-// ==================== RANDOM PROMO ====================
+
 const promoManager = {
     init() {
         this.showRandomPromo();
@@ -661,7 +658,7 @@ const promoManager = {
         promo.querySelector('p:first-of-type').textContent = randomPromo.text;
         promo.querySelector('.promo-details').textContent = randomPromo.details;
         
-        // Schimbăm promoția la 10 secunde
+        
         setInterval(() => {
             const newPromo = promos[Math.floor(Math.random() * promos.length)];
             promo.querySelector('p:first-of-type').style.transition = 'opacity 0.3s';
@@ -676,9 +673,9 @@ const promoManager = {
     }
 };
 
-// ==================== INIȚIALIZARE APLICAȚIE ====================
+
 document.addEventListener('DOMContentLoaded', () => {
-    authManager.init();
+    authManager.init(); // Atuentificare sesiune
     cartManager.init();
     menuManager.init();
     contactForm.init();

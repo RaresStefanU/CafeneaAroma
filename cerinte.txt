@@ -1,0 +1,45 @@
+
+Cerinte Proiect Tehnici Web
+Punctajul pentru proiect (20 puncte):
+
+    Partea de HTML + CSS + responsive: 8 puncte (se va prezenta în săptămâna 8, în cadrul laboratorului)
+    Partea de JavaScript: 12 puncte (se va prezenta în ultima săptămână, în cadrul laboratorului)
+
+Atenție: Nu puteți folosi librării, framework-uri CSS sau JavaScript (cum ar fi jQuery, Bootstrap, Angular, React, etc.) pentru realizarea proiectului
+Cerințe pentru partea de HTML și CSS (8 puncte):
+
+    Proiectul să aibă minim 4 pagini diferite (fișiere HTML diferite);
+    Fișiere separate pentru HTML și CSS;
+    HTML: să folosească tagurile semantice prezentate la curs/laborator (header, main, section, article, aside, footer, h1-h6);
+    Să treacă testul de validare HTML (HTML Validator) și testul de validare CSS (CSS Validator);
+    Site-ul să fie responsive (folosirea media query, unități relative, tipuri de display, etc.);
+    Selectori CSS de bază (după id, clasă, tag, elementConținut, elementCopil, al n-lea copil de tipul unui tag (:nth-of-type));
+    Proprietăți de bază: width, height, color, background, font-size, border, padding, margin, display, etc.;
+    Layout-ul să conțină coloane (pe minim o pagină) și să fie realizat fără tabele (folosind flex și/sau grid);
+    Site-ul să conțină un meniu drop-down (expandabil) realizat doar cu HTML și CSS;
+    Generarea conținutului folosind :after, :before (folosire cu sens);
+    Tranziție care implică schimbarea mai multor proprietăți la intervale diferite de timp;
+    Animație care să modifice mai multe proprietăți ale aceluiași element;
+    Conținutul site-ului să aibă sens.
+
+Cerințe pentru partea de JavaScript (12 puncte):
+
+    Fișier separat JavaScript;
+    Modificarea stilului unui element sau al unui grup de elemente;
+    Manevrarea DOM-ului (selectare după id, tag, clasă, selectorCSS);
+    Creare și ștergere de elemente;
+    Folosirea și modificarea evenimentelor generate de mouse și tastatură;
+    Modificare de proprietăți;
+    Inputuri funcționale (de exemplu: input de tip text/range/number/radio/checkbox, select, textarea);
+    Folosirea setTimeout și/sau setInterval;
+    Folosirea localStorage (să se păstreze în localStorage o colecție de elemente);
+    Folosirea a cel puțin unei metode din clasele: Math, Array, String, Date;
+    Schimbarea aleatoare a valorilor unor proprietăți (de exemplu: culoare, dimensiuni, poziții);
+    Folosirea proprietăților classList, target, currentTarget;
+    Folosirea metodelor getComputedStyle și stopPropagation cu un sens relevant;
+    Validarea datelor dintr-un formular folosind expresii regulate;
+    Cereri Ajax cu preluare date din fișier JSON;
+    Sesiuni: login+logout (folosind Storage/fișier JSON);
+    Folosire Canvas și SVG;
+    Elementele de JavaScript să fie integrate cu sens în cadrul proiectului.
+
