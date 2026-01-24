@@ -24,7 +24,7 @@ const authManager = {
     },
     
     setupAuthUI() {
-        const header = document.querySelector('header');
+        const header = document.querySelector('header'); // Manevrarea DOM-ului (selectare după id, tag, clasă, selectorCSS);
         const authContainer = document.createElement('div');
         authContainer.className = 'auth-container';
         authContainer.id = 'authContainer';
@@ -76,7 +76,7 @@ const authManager = {
                 <form id="loginForm">
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" id="username" required>
+                        <input type="text" id="username" required> 
                     </div>
                     <div class="form-group">
                         <label for="password">Parolă:</label>
@@ -86,7 +86,7 @@ const authManager = {
                     <p class="error-msg" id="loginError"></p>
                 </form>
             </div>
-        `;
+        `; // Inputuri funcționale (de exemplu: input de tip text/range/number/radio/checkbox, select, textarea);
         
         document.body.appendChild(modal);
         
@@ -100,7 +100,7 @@ const authManager = {
         
         document.getElementById('loginForm').addEventListener('submit', (e) => {
             e.preventDefault();
-            this.handleLogin();
+            this.handleLogin(); // Sesiuni: login+logout (folosind Storage/fișier JSON);
         });
     },
     
@@ -139,13 +139,13 @@ const cartManager = {
     },
     
     createCartUI() {
-        const cartBtn = document.createElement('button');
+        const cartBtn = document.createElement('button'); // Creare și ștergere de elemente;
         cartBtn.className = 'cart-btn';
         cartBtn.id = 'cartBtn';
         cartBtn.innerHTML = '🛒 <span class="cart-count">0</span>';
         document.body.appendChild(cartBtn);
         
-        cartBtn.addEventListener('click', () => this.showCart());
+        cartBtn.addEventListener('click', () => this.showCart()); //Folosirea și modificarea evenimentelor generate de mouse și tastatură;
     },
     
     addToCart(item) {
@@ -238,7 +238,7 @@ const cartManager = {
         document.body.appendChild(notification);
         
         setTimeout(() => {
-            notification.classList.add('show');
+            notification.classList.add('show'); // Folosirea setTimeout și/sau setInterval;
         }, 10);
         
         setTimeout(() => {
@@ -258,7 +258,7 @@ const menuManager = {
     
     async loadMenuFromJSON() {
         try {
-            const response = await fetch('menu-items.json'); 
+            const response = await fetch('menu-items.json'); // Cereri Ajax cu preluare date din fișier JSON;
             const data = await response.json();
             this.displayMenuItems(data);
         } catch (error) {
@@ -316,7 +316,7 @@ const contactForm = {
         });
     },
     
-    validateField(field) {
+    validateField(field) { // Validarea datelor dintr-un formular folosind expresii regulate;
         const patterns = {
             nume: /^[A-Za-zĂÂÎȘȚăâîșț\s]{2,50}$/,
             email: /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
@@ -360,7 +360,7 @@ const contactForm = {
     saveMessage(message) {
         const messages = JSON.parse(localStorage.getItem('messages') || '[]');
         messages.push(message);
-        localStorage.setItem('messages', JSON.stringify(messages));
+        localStorage.setItem('messages', JSON.stringify(messages)); // Folosirea localStorage (să se păstreze în localStorage o colecție de elemente);
     },
     
     createCanvas() {
@@ -377,7 +377,7 @@ const contactForm = {
         
         mapSection.appendChild(canvas);
         
-        const ctx = canvas.getContext('2d');
+        const ctx = canvas.getContext('2d'); // Folosire Canvas și SVG;
         
 
         ctx.fillStyle = '#f0e6d2';
@@ -442,7 +442,7 @@ const svgManager = {
         if (!logo) return;
         
         const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-        svg.setAttribute('width', '40');
+        svg.setAttribute('width', '40'); // Modificare de proprietăți;
         svg.setAttribute('height', '40');
         svg.setAttribute('viewBox', '0 0 50 50');
         svg.style.marginRight = '10px';
@@ -494,7 +494,7 @@ const visualEffects = {
         const colors = ['#ff6b35', '#6b4423', '#8b5a3c', '#ff8c5a'];
         
         features.forEach((feature, index) => {
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)]; // Schimbarea aleatoare a valorilor unor proprietăți (de exemplu: culoare, dimensiuni, poziții);
             feature.style.borderTop = `4px solid ${randomColor}`;
         });
     },
@@ -525,11 +525,11 @@ const visualEffects = {
         
         menuItems.forEach(item => {
             item.addEventListener('mouseenter', (e) => {
-                const computed = getComputedStyle(e.currentTarget);
+                const computed = getComputedStyle(e.currentTarget); // Folosirea metodelor getComputedStyle și stopPropagation cu un sens relevant;
                 const currentBg = computed.backgroundColor;
                 e.currentTarget.dataset.originalBg = currentBg;
                 
-                e.currentTarget.style.backgroundColor = '#fff5e6';
+                e.currentTarget.style.backgroundColor = '#fff5e6'; // Modificarea stilului unui element sau al unui grup de elemente;
             });
             
             item.addEventListener('mouseleave', (e) => {
@@ -596,7 +596,7 @@ const statsManager = {
         console.log(`Total vizite: ${visits.length}`);
         
         
-        const uniquePages = [...new Set(visits.map(v => v.page))];
+        const uniquePages = [...new Set(visits.map(v => v.page))]; //Folosirea a cel puțin unei metode din clasele: Math, Array, String, Date;
         console.log('Pagini vizitate:', uniquePages.join(', '));
         
         
@@ -629,7 +629,7 @@ const themeManager = {
         }
         
         toggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
+            document.body.classList.toggle('dark-theme'); // Folosirea proprietăților classList, target, currentTarget;
             const theme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
             localStorage.setItem('theme', theme);
         });
